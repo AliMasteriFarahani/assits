@@ -1,0 +1,43 @@
+./configure
+make 
+sudo make install
+
+
+//----------------------------
+chmod a+x VMware-Player-6.0.3-1895310.x86_64.bundle
+sudo ./VMware-Player-6.0.3-1895310.x86_64.bundle
+
+////////////////////////
+sudo dpkg -i package_file.deb
+
+git config --global pull.ff true
+-----------------------------------------------
+change tterminal color promt :  in ~/.bashrc
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[1;34m\]\u@\h\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+-----------------------
+
+z-shell :
+
+$ sudo apt install curl wget git
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+$ nano ~/.zshrc :: 
+ZSH_THEME="agnoster"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+$ source ~/.zshrc
+
+omz update
+$ uninstall oh_my_zsh
+
+----
+fonts : 
+git clone https://github.com/powerline/fonts
+cd fonts
+./install.sh from terminal / command line
+Open terminal->Preferences->Profiles->Change Font-> 12pt Meslo LG S DZ Regular for Powerline
